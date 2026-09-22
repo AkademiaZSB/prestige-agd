@@ -136,3 +136,7 @@ footer a:hover{color:var(--bursztyn-jasny)}
   body{padding-bottom:56px}
   .hero-fakty{gap:20px}
 }
+
+/* Opinie klientów */
+.opinia p{font-style:italic;color:var(--tekst);font-size:1.02rem;line-height:1.62}
+.opinia{border-left:3px solid var(--bursztyn)}
