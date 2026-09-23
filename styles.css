@@ -408,3 +408,36 @@ footer.stopka a:hover{color:var(--bursztyn-ciepl)}
   .usluga{min-height:20rem}
   .zaufanie-in{gap:.6rem 1.4rem;font-size:.86rem}
 }
+
+/* Obietnice w nagłówku — klient prosił, żeby „ekspres, szybko, gwarancja"
+   były widoczne od razu na wejściu, razem z telefonem. */
+.obietnice{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);
+  gap:.9rem;margin:2rem 0 1.8rem}
+.obietnice li{position:relative;padding:.95rem 1rem .95rem 2.6rem;border-radius:var(--r);
+  background:oklch(100% 0 0/.07);border:1px solid oklch(100% 0 0/.14);backdrop-filter:blur(6px)}
+.obietnice li::before{content:"";position:absolute;left:.95rem;top:1.15rem;
+  width:1rem;height:1rem;border-radius:50%;background:var(--bursztyn);
+  box-shadow:0 0 0 3px oklch(74% .145 62/.2)}
+.obietnice li::after{content:"";position:absolute;left:1.25rem;top:1.42rem;
+  width:.38rem;height:.2rem;border-left:2px solid oklch(21% .05 55);
+  border-bottom:2px solid oklch(21% .05 55);transform:rotate(-45deg)}
+.obietnice b{display:block;font-family:var(--font-naglowek);font-size:1rem;
+  color:#fff;font-weight:600;line-height:1.25}
+.obietnice span{display:block;font-size:.86rem;color:oklch(80% .02 250);margin-top:.15em}
+
+/* Telefon jako główny element wezwania — nie przycisk, tylko sam numer */
+.tel-duzy{display:inline-flex;flex-direction:column;gap:.15rem;
+  background:linear-gradient(135deg,var(--bursztyn-ciepl),var(--bursztyn-mocny));
+  color:oklch(20% .05 55);padding:.95rem 1.8rem;border-radius:var(--r-l);
+  box-shadow:var(--cien-bursztyn);transition:transform var(--tempo-w) var(--krzywa),
+  box-shadow var(--tempo) var(--krzywa)}
+.tel-duzy:hover{transform:translateY(-2px);box-shadow:0 14px 36px oklch(74% .145 62/.5)}
+.tel-etykieta{font-size:.82rem;font-weight:600;opacity:.85}
+.tel-numer{font-family:var(--font-naglowek);font-size:clamp(1.6rem,1.2rem + 1.6vw,2.2rem);
+  font-weight:800;letter-spacing:-.02em;line-height:1.05}
+.hero-pod a{color:var(--bursztyn-ciepl);font-weight:600}
+
+@media(max-width:900px){.obietnice{grid-template-columns:1fr;gap:.55rem}
+  .obietnice li{padding:.75rem .9rem .75rem 2.5rem}
+  .obietnice li::before{top:.95rem}.obietnice li::after{top:1.22rem}}
+@media(max-width:760px){.tel-duzy{width:100%;align-items:center;text-align:center}}
